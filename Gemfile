@@ -7,6 +7,8 @@ gem 'rails', '4.2.2'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Bootstrap (http://getbootstrap.com)
+gem 'bootstrap-sass', '~> 3.3.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -33,13 +35,20 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
+  # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-rails'
+  # Rspec is used for Bheavior Driven Development (http://rspec.info, https://github.com/rspec/rspec)
+  gem 'rspec-rails', '~> 3.0'
+  # A library for setting up Ruby objects as test data. (https://github.com/thoughtbot/factory_girl)
+  gem 'factory_girl'
+  # Aids in unit testing relationships (https://github.com/thoughtbot/shoulda-matchers)
+  gem "shoulda-matchers"
+  # Acceptance test framework for web applications. (https://github.com/jnicklas/capybara)
+  gem 'capybara'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Allows for Fake data to be created very easily
+  gem "faker"
 end
-

@@ -1,0 +1,7 @@
+class RestaurantCategory < ActiveRecord::Base
+  belongs_to :restaurant
+  belongs_to :category
+
+  validates :restaurant_id, presence: true
+  validates :category_id, presence: true
+end
