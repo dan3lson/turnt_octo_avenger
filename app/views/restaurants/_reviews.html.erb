@@ -1,0 +1,14 @@
+<div>
+  <p class="lead">
+    Reviews
+  </p>
+  <% @restaurant.reviews.each do |review| %>
+    <ul class="list-group">
+      <l1 class="list-group-item">
+        Rating: <%= review.rating %>
+        <br/>
+        Description: <%= review.description %>
+      </l1>
+    </ul>
+  <% end %>
+</div>

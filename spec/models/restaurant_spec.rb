@@ -18,6 +18,7 @@ RSpec.describe Restaurant, type: :model do
   describe "#associations" do
     it { should have_many(:categories) }
     it { should have_many(:restaurant_categories) }
+    it { should have_many(:reviews) }
   end
 
   describe "#validations" do

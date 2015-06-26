@@ -1,0 +1,8 @@
+<%= link_to "Back", restaurant_path(@restaurant) %>
+
+<h1>
+  Edit Restaurant
+  <%= link_to "&#10006;".html_safe, restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" } %>
+</h1>
+
+<%= render "form" %>

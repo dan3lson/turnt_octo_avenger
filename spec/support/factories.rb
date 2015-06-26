@@ -16,4 +16,10 @@ FactoryGirl.define do
   factory :category do
     name "Dominican"
   end
+
+  factory :review do
+    rating 3
+    description "Best mangu on earth - go get some now!"
+    restaurant
+  end
 end

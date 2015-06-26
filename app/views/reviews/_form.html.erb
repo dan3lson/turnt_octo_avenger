@@ -1,0 +1,30 @@
+<div class="well">
+  <p class="lead">
+    Your Review
+  </p>
+  <%= form_for [@restaurant, @review] do |f| %>
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          Yikes! There are
+          <%= pluralize(@review.errors.count, "error") %>
+          you need to fix:
+        </h2>
+        <ul>
+          <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="form-group">
+      <%= f.label :rating %>
+      <%= f.text_field :rating, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, cols: 92, rows: 15, class: "form-control" %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-default btn-lg" %>
+  <% end %>
+</div>

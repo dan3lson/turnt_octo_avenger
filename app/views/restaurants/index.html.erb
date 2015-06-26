@@ -1,0 +1,14 @@
+<h1>
+  Restaurants
+  <span class="new_button">
+      <%= link_to "+", new_restaurant_path %>
+  </span>
+</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <div class="col-sm-6">    
+    <h3>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </h3>
+  </div>
+<% end %>

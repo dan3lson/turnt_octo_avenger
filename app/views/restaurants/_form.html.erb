@@ -1,0 +1,47 @@
+<%= form_for @restaurant do |f| %>
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        Yikes! There are
+        <%= pluralize(@restaurant.errors.count, "error") %>
+        you need to fix:
+      </h2>
+      <ul>
+        <% @restaurant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :street1 %>
+    <%= f.text_field :street1 %>
+  </p>
+  <p>
+    <%= f.label :street2 %>
+    <%= f.text_field :street2 %>
+  </p>
+  <p>
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
